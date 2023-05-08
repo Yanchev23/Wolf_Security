@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Wolf Security company located in London</title>
+    <meta
+      name="description"
+      content="Wolf Security is the best security service provider offering 
+      physical and electronic security in London"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    />
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="index.html"
+          ><img src="Images/logo.png" alt="Wolf Security Logo"
+        /></a>
+        <div class="nav-links">
+          <i class="fa fa-times"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="products.html">PRODUCTS</a></li>
+            <li><a href="products.html">SERVICES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="text-box1">
+        <h1>Professionalism-Integrity-Accountability</h1>
+        <p>
+          Welcome to our Security Company website. Our company is dedicated to
+          providing <br />top-notch security services to our clients.
+        </p>
+        <a href="" class="hero-btn">Visit Us To Know More</a>
+      </div>
+
+      <br /><br />
+
+      <!-- Container for the image gallery -->
+      <div class="container1">
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+          <img
+            src="Images/Image_slider1.png"
+            alt="Wolf Security Proffesional Team"
+            style="width: 20%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <img
+            src="Images/Image_slider2.png"
+            alt="Access Control"
+            style="width: 20%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <img
+            src="Images/Image_slider3.png"
+            alt="Undercover Protection"
+            style="width: 20%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <img
+            src="Images/Image_slider4.png"
+            alt="Entry Searches"
+            style="width: 20%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <img
+            src="Images/Image_slider5.png"
+            alt="CCTV Monitoring"
+            style="width: 20%"
+          />
+        </div>
+
+        <div class="mySlides">
+          <img
+            src="Images/Image_slider6.png"
+            alt="VIP Escort"
+            style="width: 20%"
+          />
+        </div>
+
+        <!-- Image text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail images -->
+        <div class="row1">
+          <div class="column1">
+            <img
+              class="demo cursor"
+              src="Images/Image_slider1.png"
+              style="width: 100%"
+              onclick="currentSlide(1)"
+              alt="PROFESSIONAL TEAM"
+            />
+          </div>
+          <div class="column1">
+            <img
+              class="demo cursor"
+              src="Images/Image_slider2.png"
+              style="width: 100%"
+              onclick="currentSlide(2)"
+              alt="ACCESS CONTROL"
+            />
+          </div>
+          <div class="column1">
+            <img
+              class="demo cursor"
+              src="Images/Image_slider3.png"
+              style="width: 100%"
+              onclick="currentSlide(3)"
+              alt="UNDERCOVER PROTECTION"
+            />
+          </div>
+          <div class="column1">
+            <img
+              class="demo cursor"
+              src="Images/Image_slider4.png"
+              style="width: 100%"
+              onclick="currentSlide(4)"
+              alt="ENTRY SEARCHES"
+            />
+          </div>
+          <div class="column1">
+            <img
+              class="demo cursor"
+              src="Images/Image_slider5.png"
+              style="width: 100%"
+              onclick="currentSlide(5)"
+              alt="CCTV MONITORING"
+            />
+          </div>
+          <div class="column1">
+            <img
+              class="demo cursor"
+              src="Images/Image_slider6.png"
+              style="width: 100%"
+              onclick="currentSlide(6)"
+              alt="VIP ESCORT"
+            />
+          </div>
+        </div>
+      </div>
+
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides((slideIndex = n));
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("demo");
+          let captionText = document.getElementById("caption");
+          if (n > slides.length) {
+            slideIndex = 1;
+          }
+          if (n < 1) {
+            slideIndex = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+          captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+      </script>
+    </section>
+  </body>
+</html>
